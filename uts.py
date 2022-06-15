@@ -1,34 +1,39 @@
-class menumakanan:
+class barang:
 
-    def menumakanan():
-        global totalmakanan
-        global porsi
-        global makanan
-        print ("\n----------------------- menumakanan -----------------------")
-        print ("1. pentol tono - Rp 10000")
-        print ("2. pentol kawan - Rp 10000")
-        print ("3. telur gulung - Rp 5000")
+    def barang():
+        global totalbarang
+        global banyak
+        global barang
+        print ("\n----------------------- barang -----------------------")
+        print ("1. celana levis - Rp 150000")
+        print ("2. baju cardinal - Rp 250000")
+        print ("3. daster - Rp 100000")
+        print ("4. kaos polos - 50000")
         nomor=int(input("masukan pilihan: "))
-        porsi=int(input("berapa porsi: "))
+        banyak=int(input("berapa banyak: "))
 
         if nomor==1:
-            totalmakanan=porsi*10000
-            print (porsi,"porsi pentol tono = Rp", totalmakanan)
-            makanan=("pentol tono")
+            totalbarang=banyak*150000
+            print (banyak,"banyak celana levis = Rp", totalbarang)
+            barang=("celana levis")
         elif nomor==2:
-            totalmakanan=porsi*10000
-            print (porsi,"porsi pentol kawan = Rp",totalmakanan)
-            makanan=("pento kawan")
+            totalbarang=banyak*250000
+            print (banyak,"banyak baju cardinal = Rp",totalbarang)
+            barang=("baju cardinal")
         elif nomor==3:
-            totalmakanan=porsi*5000
-            print (porsi,"porsi telur gulung = Rp", totalmakanan)
-            makanan=("telur gulung")
+            totalbarang=banyak*100000
+            print (banyak,"banyak daster = Rp", totalbarang)
+            barang=("daster")
+        elif nomor==4:
+            totalbarang=banyak*50000
+            print (banyak,"banyak kaos polos = Rp", totalbarang)
+            barang=("kaos polos")
         else:
             print("pilihan tidak ada, silahkan masukan lagi!!!")
-            menumakanan()
+            barang()
 
-    menumakanan()
-    totalsemua=totalmakanan
+    barang()
+    totalsemua=totalbarang
 
     print("\ntotal harus dibayar:Rp",totalsemua)
     uang=int(input("uang tunai pembeli: Rp "))  
@@ -38,11 +43,9 @@ class menumakanan:
     print("\n===============================================")   
     print("\n================ struk beli ===================")
     print("\n===============================================")
-    print ("nama\t\t:",menumakanan)
-    print ("beli\t\t:",porsi,makanan,"(Rp",totalmakanan,")")
+    print ("nama\t\t:",barang)
+    print ("beli\t\t:",banyak,barang,"(Rp",totalbarang,")")
     print ("tagihan\t\t: Rp",totalsemua)
     print ("dibayar\t\t: Rp",uang)
     print ("kembalian\t\t: Rp",kembalian)
     print("=================================================")
-
-
